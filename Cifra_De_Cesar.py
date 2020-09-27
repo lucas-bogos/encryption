@@ -1,3 +1,4 @@
+#obtem os caracteres
 def get_strs():
     array = []
     
@@ -6,15 +7,18 @@ def get_strs():
         array.append(caractere)
     return array
 
+#faz a autenticação na chave de criptografia
 def key_Variable(key):
     if 0 < key < 26:
         return True
     return False
 
+#se a chave for inválida irá retornar um erro
 def value_KEY():
    if not key_Variable(key):
         return "Erro (valor de chave inválida)\ntente colocando key > 0 "
 
+#para cifrar será usado duas atribuições "TEXT" e "key"
 def encrypt(TEXT, key = 3):
     TEXT = TEXT.lower()
     array = get_strs()
@@ -27,6 +31,7 @@ def encrypt(TEXT, key = 3):
         new_TEXT += new_Caractere
     return new_TEXT.upper()
 
+#responsável por decifrar
 def decrypt(TEXT, key = 3):
     TEXT = TEXT.lower()
     array = get_strs()
@@ -39,6 +44,8 @@ def decrypt(TEXT, key = 3):
         new_TEXT += new_Caractere
     return new_TEXT.upper()
 user1 = ""
+
+#laço WHILE para que enquanto USER1 for diferente de "n" executa o bloco de código
 while user1 != "n":
     print("Bem vindo ao CRIPT E DECRIPT")
     print("[1] para criptografar")
