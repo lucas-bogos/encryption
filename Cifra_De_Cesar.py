@@ -8,14 +8,14 @@ def get_strs():
     return array
 
 #faz a autenticação na chave de criptografia
-def key_Variable(key):
+def key_VALIDATION(key):
     if 0 < key < 26:
         return True
     return False
 
 #se a chave for inválida irá retornar um erro
 def value_KEY():
-   if not key_Variable(key):
+   if not key_VALIDATION(key):
         return "Erro (valor de chave inválida)\ntente colocando key > 0 "
 
 #para cifrar será usado duas atribuições "TEXT" e "key"
